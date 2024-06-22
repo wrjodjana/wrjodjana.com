@@ -6,10 +6,13 @@ import marketanalyzer from "../../../public/marketanalyzer.png";
 import chicago from "../../../public/chicago.png";
 import { FaGithub } from "react-icons/fa";
 import { IoLinkSharp } from "react-icons/io5";
+import { Roboto_Slab } from "next/font/google";
+
+const robotoSlab = Roboto_Slab({ subsets: ["latin"] });
 
 export default function ProjectsSection() {
   return (
-    <section className="mt-10">
+    <section className={`${robotoSlab.className} mt-10`}>
       <h2 className="text-3xl font-bold">Projects</h2>
       <div className="flex flex-wrap justify-center gap-4 mt-4">
         <div className="w-96 bg-gray-100 p-4 rounded-lg shadow">

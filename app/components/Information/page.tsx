@@ -1,9 +1,12 @@
 import React from "react";
 import { FaEnvelope, FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
+import { Roboto_Mono } from "next/font/google";
+
+const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 export default function InformationSection() {
   return (
-    <header className="flex flex-col items-center text-left max-w-2xl">
+    <header className={`${robotoMono.className} flex flex-col items-center text-left max-w-2xl`}>
       <h1 className="text-4xl font-bold">Warren Jodjana</h1>
       <div className="flex space-x-4 mt-2">
         <a href="mailto:jodjana2@illinois.edu" className="text-red-600 text-2xl">
