@@ -21,6 +21,7 @@ export default function InformationSection() {
       </div>
       <p className="mt-4">
         Hi! I&apos;m Warren, a student at the University of Illinois studying Computer Science and Geographic Information Science. I&apos;m mostly interested in full-stack web development, geospatial analysis and data science (AI/ML).
+        I&apos;m an incoming data engineering intern at Halodoc.
       </p>
       <p className="mt-4">
         On campus, I&apos;m currently a research assistant at the{" "}
@@ -33,9 +34,8 @@ export default function InformationSection() {
         </a>
         . Previously, I did research in the special education department and was a course assistant for the largest CS class,{" "}
         <a href="https://www.cs124.org/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">
-          CS 124
+          CS 124.
         </a>
-        .
       </p>
       <p className="mt-4">
         I&apos;m currently based in Urbana, Illinois but I&apos;ve lived in Jakarta and Surabaya previously. I am also a huge NBA and VCT fan and also like{" "}
