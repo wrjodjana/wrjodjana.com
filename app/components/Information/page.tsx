@@ -20,8 +20,8 @@ export default function InformationSection() {
         </a>
       </div>
       <p className="mt-4">
-        Hi! I&apos;m Warren, a student at the University of Illinois studying Computer Science and Geographic Information Science. I&apos;m mostly interested in full-stack web development, geospatial analysis and data science (AI/ML).
-        I&apos;m an incoming data engineering intern at Halodoc.
+        Hi! I&apos;m Warren, a student at the University of Illinois studying Computer Science with a dual degree in Geographic Information Science. I&apos;m mostly interested in full-stack web development, geospatial analysis and data
+        science (AI/ML). I&apos;m an incoming data engineering intern at Halodoc.
       </p>
       <p className="mt-4">
         On campus, I&apos;m currently a research assistant at the{" "}
