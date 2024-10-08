@@ -1,12 +1,12 @@
 import React from "react";
-import ProjectsSection from "./components/Projects/page";
-import InformationSection from "./components/Information/page";
+import InformationSection from "./components/information/page";
+import ExperienceSection from "./components/experience/page";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-start p-8 bg-white text-gray-900 min-h-screen">
+    <main className="flex flex-col items-center justify-start p-8 bg-gray-900 text-gray-200 min-h-screen">
       <InformationSection />
-      <ProjectsSection />
+      <ExperienceSection />
     </main>
   );
 }
