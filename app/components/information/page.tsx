@@ -22,8 +22,8 @@ export default function InformationSection() {
         </div>
       </div>
       <p className="flex-1 text-md leading-relaxed text-justify">
-        I&apos;m a student at the University of Illinois at Urbana-Champaign studying Computer Science with a minor in Statistics. I&apos;m mostly interested in full-stack web development, data engineering and machine learning. Outside of
-        this, I enjoy watching the NBA, playing Valorant and eating good food. Feel free to reach out at jodjana2@illinois.edu.
+        I&apos;m a student at the University of Illinois at Urbana-Champaign studying Computer Science and Statistics with a minor in Geographic Information Science. I&apos;m mostly interested in full-stack web development, data engineering
+        and machine learning. Outside of this, I enjoy watching the NBA, playing Valorant and eating good food. Feel free to reach out at jodjana2@illinois.edu.
       </p>
     </header>
   );
