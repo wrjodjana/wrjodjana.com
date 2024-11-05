@@ -26,7 +26,7 @@ export default function InformationSection() {
 
         <div className="max-w-2xl text-center">
           <p className="text-gray-300 text-sm leading-relaxed mb-4">
-            I'm a student studying Computer Science and Statistics with a minor in Geographic Information Science. I'm mostly interested in full-stack web development, data engineering, and machine learning.
+            I&apos;m a student studying Computer Science and Statistics with a minor in Geographic Information Science. I&apos;m mostly interested in full-stack web development, data engineering, and machine learning.
           </p>
           <p className="text-gray-400 text-sm leading-relaxed">Outside of this, I enjoy watching the NBA, playing Valorant, and eating good food (mostly spicy ones).</p>
         </div>
