@@ -16,7 +16,10 @@ const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 export default function ExperienceSection() {
   return (
     <div className={`${robotoMono.className} max-w-4xl p-4`}>
-      <h1 className="text-2xl font-bold text-gray-100 mb-4">Experience</h1>
+      <div className="text-center mb-6">
+        <h1 className="text-3xl font-bold text-gray-100 mb-4">Experience</h1>
+        <div className="w-24 h-1 bg-gray-700 mx-auto rounded-full"></div>
+      </div>
       <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-0">
         <div className="flex items-start">
           <div className="mr-4 flex-shrink-0">
