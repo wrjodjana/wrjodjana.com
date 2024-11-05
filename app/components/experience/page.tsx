@@ -2,6 +2,7 @@ import React from "react";
 import { FaMapMarkerAlt, FaCalendarAlt } from "react-icons/fa";
 import Image from "next/image";
 import { Roboto_Mono } from "next/font/google";
+import { Link as LinkIcon } from "lucide-react";
 
 // images
 import TooTak from "../../../public/experience/tootak.png";
@@ -20,7 +21,9 @@ export default function ExperienceSection() {
         <h1 className="text-3xl font-bold text-gray-100 mb-4">Experience</h1>
         <div className="w-24 h-1 bg-gray-700 mx-auto rounded-full"></div>
       </div>
-      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-0">
+      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-4 group relative">
+        {" "}
+        {/* Added mb-4 for spacing */}
         <div className="flex items-start">
           <div className="mr-4 flex-shrink-0">
             <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
@@ -28,26 +31,41 @@ export default function ExperienceSection() {
             </div>
           </div>
           <div className="flex-grow">
-            <h2 className="text-base font-bold mb-1">Research Intern - Uncertainty Quantification Group</h2>
-            <div className="flex items-center text-xs text-gray-500 mb-1">
+            <div className="flex items-center gap-2">
+              <h2 className="text-base font-bold">Research Intern - Uncertainty Quantification Group</h2>
+              <a href="https://resilientroutes.app" target="_blank" rel="noopener noreferrer" className="p-1.5 bg-gray-800 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <LinkIcon className="w-3.5 h-3.5 text-gray-300" />
+              </a>
+            </div>
+            <div className="flex items-center text-xs text-gray-500 mt-1 mb-2">
               <FaCalendarAlt className="mr-1" />
               <span>May 2024 - Present</span>
               <FaMapMarkerAlt className="ml-3 mr-1" />
               <span>Champaign, Illinois</span>
             </div>
-            <p className="text-xs text-gray-400 leading-relaxed">
+            <p className="text-xs text-gray-400 leading-relaxed mb-2">
+              {" "}
+              {/* Added mb-2 for spacing */}
               - Building a web application to integrate GNNs to determine
               <br />
               seismic reliability of bridge failures
             </p>
+            <div className="flex flex-wrap gap-2">
+              {["React", "Flask", "PyTorch", "dgl", "NetworkX", " AWS EC2"].map((tech, index) => (
+                <span key={index} className="px-2 py-0.5 bg-gray-800 text-gray-300 rounded-full text-[10px]">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
-      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-0">
+
+      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-4">
         <div className="flex items-start">
           <div className="mr-4 flex-shrink-0">
             <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
-              <Image src={disruption} alt="UQ Group Logo" width={70} height={70} className="rounded-full" />
+              <Image src={disruption} alt="Disruption Lab Logo" width={70} height={70} className="rounded-full" />
             </div>
           </div>
           <div className="flex-grow">
@@ -58,15 +76,23 @@ export default function ExperienceSection() {
               <FaMapMarkerAlt className="ml-3 mr-1" />
               <span>Champaign, Illinois</span>
             </div>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              - Developing private LLMs for the Gies College of Business
+            <p className="text-xs text-gray-400 leading-relaxed mb-2">
+              - Developing private LLMs for accounting classes (ACCY 593)
               <br />
-              utilizing the existing Simprobot engine
+              in the Gies College of Buisness
             </p>
+            <div className="flex flex-wrap gap-2">
+              {["Python", "LangChain", "OpenAI API", "Streamlit"].map((tech, index) => (
+                <span key={index} className="px-2 py-0.5 bg-gray-800 text-gray-300 rounded-full text-[10px]">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
-      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-0">
+
+      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-4">
         <div className="flex items-start">
           <div className="mr-4 flex-shrink-0">
             <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
@@ -81,11 +107,19 @@ export default function ExperienceSection() {
               <FaMapMarkerAlt className="ml-3 mr-1" />
               <span>Champaign, Illinois</span>
             </div>
-            <p className="text-xs text-gray-400">- Backend engineering for gamified modules</p>
+            <p className="text-xs text-gray-400 mb-2">- Backend engineering for gamified modules</p>
+            <div className="flex flex-wrap gap-2">
+              {["Node.js", "Express", "MongoDB", "AWS S3"].map((tech, index) => (
+                <span key={index} className="px-2 py-0.5 bg-gray-800 text-gray-300 rounded-full text-[10px]">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
-      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-0">
+
+      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-4 group relative">
         <div className="flex items-start">
           <div className="mr-4 flex-shrink-0">
             <div className="w-12 h-12 bg-[#eb0b4b] rounded-lg flex items-center justify-center">
@@ -93,22 +127,40 @@ export default function ExperienceSection() {
             </div>
           </div>
           <div className="flex-grow">
-            <h2 className="text-base font-bold mb-1">Data Engineer Intern - Halodoc Technology</h2>
+            <div className="flex items-center gap-2">
+              <h2 className="text-base font-bold">Data Engineer Intern - Halodoc Technology</h2>
+              <a
+                href="https://blogs.halodoc.io/tag/data-engineering/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 bg-gray-800 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <LinkIcon className="w-3.5 h-3.5 text-gray-300" />
+              </a>
+            </div>
             <div className="flex items-center text-xs text-gray-500 mb-1">
               <FaCalendarAlt className="mr-1" />
               <span>July 2024 - Aug 2024</span>
               <FaMapMarkerAlt className="ml-3 mr-1" />
               <span>Jakarta, Indonesia</span>
             </div>
-            <p className="text-xs text-gray-400 leading-relaxed">
+            <p className="text-xs text-gray-400 leading-relaxed mb-2">
               - ETL pipelines for file tracker data and data archiving
               <br />
               for non-partitioned mySQL tables
             </p>
+            <div className="flex flex-wrap gap-2">
+              {["pandas", "SQL", "Airflow", "AWS Redshift", "PySpark"].map((tech, index) => (
+                <span key={index} className="px-2 py-0.5 bg-gray-800 text-gray-300 rounded-full text-[10px]">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
-      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-0">
+
+      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-4">
         <div className="flex items-start">
           <div className="mr-4 flex-shrink-0">
             <div className="w-12 h-12 bg-[#13294B] rounded-lg flex items-center justify-center">
@@ -123,34 +175,18 @@ export default function ExperienceSection() {
               <FaMapMarkerAlt className="ml-3 mr-1" />
               <span>Champaign, Illinois</span>
             </div>
-            <p className="text-xs text-gray-400 leading-relaxed">
+            <p className="text-xs text-gray-400 leading-relaxed mb-2">
               - Architected text classification models using NLP to analyse
               <br />
               interviews with students with disabilities
             </p>
-          </div>
-        </div>
-      </section>
-      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-0">
-        <div className="flex items-start">
-          <div className="mr-4 flex-shrink-0">
-            <div className="w-12 h-12 bg-[#13294B] rounded-lg flex items-center justify-center">
-              <Image src={cs} alt="SPED Logo" width={70} height={70} className="rounded-full" />
+            <div className="flex flex-wrap gap-2">
+              {["Python", "scikit-learn", "TensorFlow"].map((tech, index) => (
+                <span key={index} className="px-2 py-0.5 bg-gray-800 text-gray-300 rounded-full text-[10px]">
+                  {tech}
+                </span>
+              ))}
             </div>
-          </div>
-          <div className="flex-grow">
-            <h2 className="text-base font-bold mb-1">Course Assistant - Intro to CS I</h2>
-            <div className="flex items-center text-xs text-gray-500 mb-1">
-              <FaCalendarAlt className="mr-1" />
-              <span>Jan 2024 - May 2024</span>
-              <FaMapMarkerAlt className="ml-3 mr-1" />
-              <span>Champaign, Illinois</span>
-            </div>
-            <p className="text-xs text-gray-400 leading-relaxed">
-              - Taught basic object-oriented principles and supported
-              <br />
-              debugging with Android Studio
-            </p>
           </div>
         </div>
       </section>

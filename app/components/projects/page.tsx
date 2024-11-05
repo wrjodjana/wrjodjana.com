@@ -7,6 +7,8 @@ const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 import stocks from "../../../public/projects/stocks.png";
 import permias from "../../../public/permiasuiuc.png";
+import chicago from "../../../public/chicago.png";
+import akar from "../../../public/akar.png";
 
 const projects = [
   {
@@ -25,16 +27,33 @@ const projects = [
     liveUrl: "https://www.permiasuiuc.org",
     tags: ["React", "Tailwind", "TypeScript", "Supabase"],
   },
+  {
+    title: "Chicago Environmental Analysis",
+    description: "Using R, performed geospatial operations such as Kernel Density Estimation and Proximity Analysis, to assesstraffic density, air quality trends and accessibility of EV Stations, thereby aiding in urban development",
+    imageUrl: chicago,
+    githubUrl: "https://github.com/wrjodjana/chicago-analysis",
+    liveUrl: "https://wrjodjana.github.io/chicago-analysis/",
+    tags: ["R", "Rmd"],
+  },
+  {
+    title: "akar",
+    description:
+      "Developed a flashcard webapp using space repetition and the SuperMemo2 algorithm, increasing user retention by 85.2%. Worked in an agile environment using React and Express to set up the user interface and flashcard system",
+    imageUrl: akar,
+    githubUrl: "https://github.com/hindra2/akar",
+    liveUrl: "https://akar.study/#/landing",
+    tags: ["React", "TypeScript", "Supabase", "PostgreSQL"],
+  },
 ];
 
 export default function ProjectsSection() {
   return (
-    <div className={`${robotoMono.className} max-w-3xl mx-auto p-4`}>
+    <div className={`${robotoMono.className} max-w-6xl mx-auto p-4`}>
       <div className="text-center mb-6">
         <h1 className="text-3xl font-bold text-gray-100 mb-4">Projects</h1>
         <div className="w-24 h-1 bg-gray-700 mx-auto rounded-full"></div>
       </div>
-      <div className="space-y-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project, index) => (
           <section key={index} className="bg-gray-900 rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
             <div className="relative h-72">
