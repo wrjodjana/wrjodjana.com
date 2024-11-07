@@ -29,7 +29,7 @@ const projects = [
   },
   {
     title: "Chicago Environmental Analysis",
-    description: "Using R, performed geospatial operations such as Kernel Density Estimation and Proximity Analysis, to assesstraffic density, air quality trends and accessibility of EV Stations, thereby aiding in urban development",
+    description: "Using R, performed geospatial operations such as Kernel Density Estimation and Proximity Analysis, to assess traffic density, air quality trends and accessibility of EV Stations in Chicago, Illinois",
     imageUrl: chicago,
     githubUrl: "https://github.com/wrjodjana/chicago-analysis",
     liveUrl: "https://wrjodjana.github.io/chicago-analysis/",

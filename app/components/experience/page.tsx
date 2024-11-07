@@ -22,8 +22,6 @@ export default function ExperienceSection() {
         <div className="w-24 h-1 bg-gray-700 mx-auto rounded-full"></div>
       </div>
       <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-4 group relative">
-        {" "}
-        {/* Added mb-4 for spacing */}
         <div className="flex items-start">
           <div className="mr-4 flex-shrink-0">
             <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
@@ -44,8 +42,6 @@ export default function ExperienceSection() {
               <span>Champaign, Illinois</span>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed mb-2">
-              {" "}
-              {/* Added mb-2 for spacing */}
               - Building a web application to integrate GNNs to determine
               <br />
               seismic reliability of bridge failures
