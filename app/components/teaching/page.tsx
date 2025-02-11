@@ -10,6 +10,15 @@ const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 const teachingPositions = [
   {
+    role: "Coure Assistant - CS 222 (Software Design Lab)",
+    course: "CS 222",
+    dates: "Jan 2025 - Present",
+    location: "Champaign, Illinois",
+    description: ["Project manager mentoring student teams in software engineering", "and teaching agile methodologies"],
+    image: cs124,
+    link: "https://cs222-uiuc.pages.dev/",
+  },
+  {
     role: "Coure Assistant - CS 124 (Intro to Computer Science I)",
     course: "CS 124",
     dates: "Jan 2024 - May 2024",
@@ -52,8 +61,12 @@ export default function TeachingSection() {
                 <span>{position.location}</span>
               </div>
               <div className="text-xs text-gray-400">
-                <p className="leading-relaxed">- Taught basic object-oriented principles in Java and supported</p>
-                <p className="leading-relaxed ml-2">debugging with Android Studio</p>
+                {position.description.map((line, i) => (
+                  <p key={i} className={`leading-relaxed ${i > 0 ? "ml-2" : ""}`}>
+                    {i === 0 ? "- " : ""}
+                    {line}
+                  </p>
+                ))}
               </div>
             </div>
           </div>

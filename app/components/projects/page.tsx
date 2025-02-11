@@ -6,11 +6,20 @@ import Image from "next/image";
 const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 import stocks from "../../../public/projects/stocks.png";
-import permias from "../../../public/permiasuiuc.png";
-import chicago from "../../../public/chicago.png";
-import akar from "../../../public/akar.png";
+import permias from "../../../public/projects/permiasuiuc.png";
+import chicago from "../../../public/projects/chicago.png";
+import akar from "../../../public/projects/akar.png";
+import explorify from "../../../public/projects/explorify.png";
 
 const projects = [
+  {
+    title: "Explorify",
+    description: "Built a React Native app connecting 1000+ students to campus events, featuring real-time updates and personalized recommendations ",
+    imageUrl: explorify,
+    githubUrl: "https://github.com/jbw9/explorify",
+    liveUrl: "https://apps.apple.com/us/app/explorifyy/id6739402841",
+    tags: ["React Native", "TypeScript", "Nativewind", "Supabase"],
+  },
   {
     title: "US Equities and Market Analyzer",
     description: "Developed a module to analyse US stocks using technical indicators (VWAP, SMA, EMA) and machine learning algorithms such as multi-layer perceptrons, SVM, RSI and AROON",

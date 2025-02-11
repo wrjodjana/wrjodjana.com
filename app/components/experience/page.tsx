@@ -24,6 +24,46 @@ export default function ExperienceSection() {
       <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-4 group relative">
         <div className="flex items-start">
           <div className="mr-4 flex-shrink-0">
+            <div className="w-12 h-12 bg-[#13294B] rounded-lg flex items-center justify-center">
+              <Image src={cs} alt="CS Logo" width={70} height={70} className="rounded-full" />
+            </div>
+          </div>
+          <div className="flex-grow">
+            <div className="flex items-center gap-2">
+              <h2 className="text-base font-bold">Research Intern - UDL Group</h2>
+              <a
+                href="https://classtranscribe.illinois.edu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 bg-gray-800 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center"
+              >
+                <LinkIcon className="w-3.5 h-3.5 text-gray-300" />
+              </a>
+            </div>
+            <div className="flex items-center text-xs text-gray-500 mt-1 mb-2">
+              <FaCalendarAlt className="mr-1" />
+              <span>Jan 2025 - Present</span>
+              <FaMapMarkerAlt className="ml-3 mr-1" />
+              <span>Champaign, Illinois</span>
+            </div>
+            <p className="text-xs text-gray-400 leading-relaxed mb-2">
+              - Enhanced computer vision models for flash detection to improve
+              <br />
+              lecture accessibility for epileptic students
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Python", "React", "C#", "RabbitMQ", "PostgreSQL"].map((tech, index) => (
+                <span key={index} className="px-2 py-0.5 bg-gray-800 text-gray-300 rounded-full text-[10px]">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-gray-900 text-gray-300 p-3 rounded-lg mb-4 group relative">
+        <div className="flex items-start">
+          <div className="mr-4 flex-shrink-0">
             <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
               <Image src={UQGroup} alt="UQ Group Logo" width={40} height={40} />
             </div>
@@ -42,9 +82,9 @@ export default function ExperienceSection() {
               <span>Champaign, Illinois</span>
             </div>
             <p className="text-xs text-gray-400 leading-relaxed mb-2">
-              - Building a web application to integrate GNNs to determine
+              - Building a webapp to integrate GNNs for seismic reliability
               <br />
-              seismic reliability of bridge failures
+              of highway bridge systems for risk managers
             </p>
             <div className="flex flex-wrap gap-2">
               {["React", "Flask", "PyTorch", "dgl", "NetworkX", " AWS EC2"].map((tech, index) => (

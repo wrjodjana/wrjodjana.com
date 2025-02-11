@@ -26,13 +26,15 @@ export default function EducationSection() {
             <h2 className="text-base font-bold mb-1">University of Illinois at Urbana-Champaign</h2>
             <p className="flex items-center text-xs text-white mb-1">Bachelor of Science in Computer Science and Statistics</p>
             <p className="text-xs text-gray-300 leading-relaxed">
-              - GPA: 3.93
+              - GPA: 3.78
               <br />
             </p>
-            <p className="text-xs text-gray-300 leading-relaxed">
-              - Relevant Coursework: Data Structures, Object Oriented Programming,
+            <p className="text-xs text-gray-400 leading-relaxed">
+              - Relevant Coursework: Data Structures & Algorithms, Linear Algebra,
               <br />
-              Discrete Structures, Linear Algebra, Software Design Lab
+              Statistics and Probability, Discrete Structures, Software Design Lab,
+              <br />
+              Statistical Modelling
             </p>
           </div>
         </div>
