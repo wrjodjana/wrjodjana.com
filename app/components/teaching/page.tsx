@@ -10,7 +10,7 @@ const robotoMono = Roboto_Mono({ subsets: ["latin"] });
 
 const teachingPositions = [
   {
-    role: "Coure Assistant - CS 222 (Software Design Lab)",
+    role: "Course Assistant - CS 222 (Software Design Lab)",
     course: "CS 222",
     dates: "Jan 2025 - Present",
     location: "Champaign, Illinois",
@@ -19,7 +19,7 @@ const teachingPositions = [
     link: "https://cs222-uiuc.pages.dev/",
   },
   {
-    role: "Coure Assistant - CS 124 (Intro to Computer Science I)",
+    role: "Course Assistant - CS 124 (Intro to Computer Science I)",
     course: "CS 124",
     dates: "Jan 2024 - May 2024",
     location: "Champaign, Illinois",
