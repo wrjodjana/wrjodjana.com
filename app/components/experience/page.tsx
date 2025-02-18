@@ -42,7 +42,7 @@ export default function ExperienceSection() {
             </div>
             <div className="flex items-center text-xs text-gray-500 mt-1 mb-2">
               <FaCalendarAlt className="mr-1" />
-              <span>Jan 2025 - Present</span>
+              <span>Jan 2025 - Feb 2025</span>
               <FaMapMarkerAlt className="ml-3 mr-1" />
               <span>Champaign, Illinois</span>
             </div>
