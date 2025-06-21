@@ -34,7 +34,7 @@ export default function Projects() {
               <a href="https://apps.apple.com/us/app/explorifyy/id6739402841" className="text-blue-600 underline">
                 chicago environment analysis
               </a>{" "}
-              - a mini-thesis on understanding Chicago's air quality based on traffic density, trends and EV station accessibility.
+              - a mini-thesis on understanding Chicago&apos;s air quality based on traffic density, trends and EV station accessibility.
             </li>
           </ul>
         </div>
