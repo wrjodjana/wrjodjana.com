@@ -17,13 +17,13 @@ export default function Home() {
           <div className="w-full md:w-[600px] flex-shrink-0 text-black text-lg">
             <h1 className="text-2xl mb-6 mt-0 leading-none font-bold">Warren Jodjana</h1>
 
-            <p className="leading-none text-lg mb-4">I am currently studying Statistics & Computer Science at UIUC. My interests include software development, machine learning and geospatial analysis.</p>
+            <p className="leading-none text-lg mb-4">I am currently studying CS & Statistics at UIUC. My interests include software development, machine learning and geospatial analysis.</p>
 
             <p className="leading-none text-lg mb-4"> I am originally from Jakarta and Surabaya, Indonesia. This summer I am interning at ExtraHop in Seattle building an in-house tool to create changelog releases.</p>
 
             <p className="leading-none text-lg mb-4">I also do research using GNNs to understand transport networks such as bridges and traffic flow, and CNNs to predict crop yields for soybean analysis.</p>
 
-            <h2 className="text-lg font-bold mb-1 leading-none">Contacts</h2>
+            <h2 className="text-xl font-bold mb-1 leading-none">Contacts</h2>
             <div className="mt-1">
               <a href="https://www.linkedin.com/in/wrjodjana/" target="_blank" className="block mb-1 leading-none text-blue-600 underline">
                 Linkedin
