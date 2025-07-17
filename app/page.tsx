@@ -20,9 +20,9 @@ export default function Home() {
             <h1 className="text-[1.5rem] mb-6 mt-0 leading-none font-bold">Warren Jodjana</h1>
             <img src="/profile.jpg" alt="Warren Jodjana" className="max-w-[150px] my-5 block" />
 
-            <p className="mb-4 leading-none">I am currently studying Statistics & Computer Science at UIUC. My interests include software development, machine learning and geospatial analysis.</p>
-            <p className="mb-4 leading-none">I am originally from Jakarta and Surabaya, Indonesia. This summer I am interning at ExtraHop in Seattle building an in-house tool to create changelog releases.</p>
-            <p className="mb-4 leading-none">I also do research using GNNs to understand transport networks such as bridges and traffic flow, and CNNs to predict crop yields for soybean analysis.</p>
+            <p className="mb-4 leading-none">I am currently studying Statistics & Computer Science at UIUC. My interests include software development, machine learning and artificial intelligence.</p>
+            <p className="mb-4 leading-none">I am originally from Jakarta and Surabaya, Indonesia. This summer I am interning at ExtraHop in Seattle building an AI agent to create changelog releases.</p>
+            <p className="mb-4 leading-none">I also enjoy working at the intersection of technology and environment, specifically within transportation and agriculture.</p>
 
             <h2 className="text-[18px] font-bold mt-0 mb-1 leading-none">Contacts</h2>
             <div className="mt-1 mb-4">
