@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-black font-['Times_New_Roman'] text-[18px] leading-none">
+    <div className="min-h-screen bg-white text-black  text-[18px] leading-none">
       <div className="max-w-[800px] mx-auto p-4 md:p-10">
         <div className="flex gap-10 justify-start mt-10 md:mt-20 ml-0 pl-0 md:pl-12">
           {/* Sidebar */}

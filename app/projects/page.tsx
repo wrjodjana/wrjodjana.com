@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Projects() {
   return (
-    <div className="w-full min-h-screen bg-white text-black font-['Times_New_Roman'] text-lg">
+    <div className="w-full min-h-screen bg-white text-black text-lg">
       <div className="max-w-[800px] mx-auto p-4 md:p-10">
         <div className="flex flex-col md:flex-row gap-6 md:gap-10 justify-start mt-10 md:mt-20 ml-0 pl-0 md:pl-12">
           <div className="text-right min-w-[100px] leading-none flex-shrink-0 mb-4 md:mb-0">
