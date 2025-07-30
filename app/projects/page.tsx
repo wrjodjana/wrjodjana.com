@@ -23,26 +23,26 @@ export default function Projects() {
               <li className="mb-2">
                 <a href="https://www.resilientroutes.app/" className="text-[#0000ee] underline">
                   resilientroutes
-                </a>
-                - used math and neural networks to predict bridge failures
+                </a>{" "}
+                — made me like web dev but neural networks is hard
               </li>
               <li className="mb-2">
                 <a href="https://apps.apple.com/us/app/explorifyy/id6739402841" className="text-[#0000ee] underline">
                   explorify
-                </a>
-                - classic student to event connection application
+                </a>{" "}
+                — made me hate react native and mobile dev
               </li>
               <li className="mb-2">
                 <a href="https://wrjodjana.github.io/chicago-analysis/" className="text-[#0000ee] underline">
                   chicago environment analysis
-                </a>
-                - made me realize how much i loved maps
+                </a>{" "}
+                — made me appreciate the earth more
               </li>
               <li className="mb-2">
                 <a href="https://github.com/wrjodjana/hazard-map" className="text-[#0000ee] underline">
                   hazard map
-                </a>
-                - was building this until i got my internship in june
+                </a>{" "}
+                — was building this until i got my internship in june
               </li>
             </ul>
           </div>
