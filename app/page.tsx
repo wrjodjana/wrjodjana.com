@@ -16,7 +16,7 @@ export default function Home() {
             <img src="/profile.jpg" alt="Warren Jodjana" className="max-w-[150px] my-5 block" />
 
             <p className="mb-4 leading-none">i am currently studying stats and cs at uiuc. my interests include software development, mle and ai.</p>
-            <p className="mb-4 leading-none">i am originally from jakarta and surabaya, indonesia. this summer i am interning at extrahop networks in seattle building an ai agent to generate detector changelogs.</p>
+            <p className="mb-4 leading-none">i am originally from jakarta and surabaya, indonesia. last summer i interned at extrahop networks in seattle building an ai agent to generate detector changelogs.</p>
             <p className="mb-4 leading-none">i also enjoy working at the intersection of technology and environment, specifically within transportation and agriculture.</p>
 
             <h2 className="text-[18px] font-bold mt-0 mb-1 leading-none">contacts</h2>
