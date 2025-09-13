@@ -9,9 +9,6 @@ export default function Home() {
             <Link href="/" className="block mb-2 underline text-[18px] leading-none text-[#0000ee]">
               home
             </Link>
-            <Link href="/projects" className="block mb-2 underline text-[18px] leading-none text-[#0000ee]">
-              projects
-            </Link>
           </div>
 
           <div className="w-full md:w-[600px] flex-shrink-0 text-black text-[18px]">
