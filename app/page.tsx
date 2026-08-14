@@ -24,7 +24,7 @@ export default function Home() {
               </a>{" "}
               by tony hsieh when i was 13.
             </p>
-            <p className="mb-4 leading-none">i am originally from jakarta and surabaya, indonesia. woud love to take more if your in the geo/aeo space!</p>
+            <p className="mb-4 leading-none">i am originally from jakarta and surabaya, indonesia. woud love to talk more if your in the geo/aeo space!</p>
 
             <h2 className="text-[18px] font-bold mt-0 mb-1 leading-none">contacts</h2>
             <div className="mt-1 mb-4">
