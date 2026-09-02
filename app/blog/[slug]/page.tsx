@@ -4,9 +4,19 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Nav from "../../components/Nav";
 import Tag from "../Tag";
-import { getPost, getPosts, formatDate } from "../posts";
+import Toc from "../Toc";
+import { getPost, getPosts, getHeadings, formatDate, slugify } from "../posts";
 
 type Params = { params: Promise<{ slug: string }> };
+
+function textOf(children: React.ReactNode): string {
+  if (typeof children === "string" || typeof children === "number") return String(children);
+  if (Array.isArray(children)) return children.map(textOf).join("");
+  if (children && typeof children === "object" && "props" in children) {
+    return textOf((children as { props: { children?: React.ReactNode } }).props.children);
+  }
+  return "";
+}
 
 export function generateStaticParams() {
   return getPosts().map((p) => ({ slug: p.slug }));
@@ -22,6 +32,7 @@ export default async function PostPage({ params }: Params) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+  const headings = getHeadings(post.content);
 
   return (
     <div className="min-h-screen bg-white text-black text-[16px] leading-none">
@@ -40,6 +51,14 @@ export default async function PostPage({ params }: Params) {
               <ReactMarkdown
                 remarkPlugins={[remarkGfm]}
                 components={{
+                  h1: ({ node, children, ...props }) => {
+                    void node;
+                    return (
+                      <h1 id={slugify(textOf(children))} {...props}>
+                        {children}
+                      </h1>
+                    );
+                  },
                   table: ({ node, ...props }) => {
                     void node;
                     return (
@@ -54,6 +73,8 @@ export default async function PostPage({ params }: Params) {
               </ReactMarkdown>
             </div>
           </div>
+
+          <Toc headings={headings} />
         </div>
       </div>
     </div>

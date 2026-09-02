@@ -13,8 +13,8 @@ const quattro = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "warren jodjana",
-  description: "i do stuff",
+  title: "Warren Jodjana",
+  description: "I experiment.",
 };
 
 export default function RootLayout({

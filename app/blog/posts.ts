@@ -41,6 +41,32 @@ export function getPost(slug: string): Post | undefined {
   return readPost(`${slug}.md`);
 }
 
+export type Heading = { id: string; text: string };
+
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-");
+}
+
+// top-level "# " headings in the markdown body, skipping fenced code blocks
+export function getHeadings(content: string): Heading[] {
+  const headings: Heading[] = [];
+  let inFence = false;
+  for (const line of content.split("\n")) {
+    if (/^```/.test(line)) {
+      inFence = !inFence;
+      continue;
+    }
+    if (inFence) continue;
+    const m = /^#\s+(.+?)\s*$/.exec(line);
+    if (m) headings.push({ id: slugify(m[1]), text: m[1] });
+  }
+  return headings;
+}
+
 export function formatDate(iso: string): string {
   const [y, m, d] = iso.split("-").map(Number);
   return new Date(Date.UTC(y, m - 1, d))

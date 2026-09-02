@@ -44,19 +44,19 @@ Real users do not all type the same prompt or start from the same app, so instea
 | Memory B | Only model API                     |
 | Registry | Model API and `registry.npmjs.org` |
 
-Memory A and Memory B are identical on purpose. Two arms with the same setup should give the same answer, so if they disagree, something is leaking; if they agree, I can trust the setup and pool them into a single memory arm.
+Memory A and Memory B are **identical on purpose**. Two arms with the same setup should give the same answer, so if they disagree, something is leaking; if they agree, I can trust the setup and pool them into a single memory arm.
 
-Every trial starts from the same bare Express app (one dependency, `express`) and gets one prompt, a simple task like "add tests for the server". The prompt bank has 10 of these: 6 are tasks in an area where a package got renamed or deprecated, and 4 are in areas where nothing changed, so the agent isn't always walking into a trap. The run covers all 10 prompts, with 50 trials per arm, so 150 trials in total.
+Every trial starts from the same bare Express app (one dependency, `express`) and gets one prompt, a simple task like "add tests for the server". The prompt bank has 10 of these: 6 are tasks in an area where a package got renamed or deprecated, and 4 are in areas where nothing changed, so the agent isn't always walking into a trap. The run covers all 10 prompts, with 50 trials per arm, so **150 trials in total**.
 
 Before the agent starts, the runner also tries to reach `registry.npmjs.org` from inside the container. If that request goes through when it shouldn't, the firewall isn't doing its job, so the trial fails and stays out of the results.
 
-After the trials complete, every name the agents tried is checked against the registry from the host. The results of this would return either 4 things: `missing`, `deprecated`, `renamed` or `ok`. A trial's outcome only comes from its first attempt.
+After the trials complete, every name the agents tried is checked against the registry from the host. The results of this would return either 4 things: `missing`, `deprecated`, `renamed` or `ok`. **A trial's outcome only comes from its first attempt.**
 
 # Results
 
-All 150 trials ran clean, the registry was blocked in every memory trial and open in every registry trial and when Memory A and Memory B did install something, they picked the same names from the same prompts. Two registry trials could not reach the registry because of a network issue, got thrown out before the agent started and reran.
+**All 150 trials ran clean**, the registry was blocked in every memory trial and open in every registry trial and when Memory A and Memory B did install something, they picked the same names from the same prompts. Two registry trials could not reach the registry because of a network issue, got thrown out before the agent started and reran.
 
-However, based on the results there was basically almost nothing to measure as only 46 of the 150 trials installed anything at all, and every single first name was accurate:
+However, based on the results there was basically almost nothing to measure as **only 46 of the 150 trials installed anything at all**, and every single first name was accurate:
 
 | Arm      | Trials with an install | Wrong first name |
 | -------- | ---------------------- | ---------------- |
@@ -66,10 +66,10 @@ However, based on the results there was basically almost nothing to measure as o
 
 After looking deeper into the agent tracing, I found out 3 reasons why this happened:
 
-1. Model already knows every rename in my list and all of them moved before the model's training cutoff, so it had the new names.
-2. The registry arm never looked at the shelf: only 5 of 50 registry trials did the agent run `npm view` before its first install.
-3. Most prompts never produced an install, instead everything else was hand-written: config parsing, request logging, rate limiting.
+1. **Model already knows every rename in my list** and all of them moved before the model's training cutoff, so it had the new names.
+2. **The registry arm never looked at the shelf**: only 5 of 50 registry trials did the agent run `npm view` before its first install.
+3. **Most prompts never produced an install**, instead everything else was hand-written: config parsing, request logging, rate limiting.
 
 # Conclusion
 
-My conclusion is very simple: this experiment was accurate and there were no trials that were imprecise. However, we now know that agent harnesses can quickly double-check which package they were planning to install, which is a positive note. On the negative side, we are not seeing enough of the agent looking into shelves (aka the registry), but rather figuring things out the old-fashioned way. I want to continue experimenting with this second idea and see how we can improve agents installing specific dev tool packages.
+My conclusion is very simple: **this experiment was accurate and there were no trials that were imprecise**. However, we now know that agent harnesses can quickly double-check which package they were planning to install, which is a positive note. On the negative side, we are **not seeing enough of the agent looking into shelves** (aka the registry), but rather figuring things out the old-fashioned way. I want to continue experimenting with this second idea and see how we can improve agents installing specific dev tool packages.
